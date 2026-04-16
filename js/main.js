@@ -127,14 +127,14 @@
         name: "Hafiz Syed Ahmed Qasim",
         role: "Academic supervision, technical direction, and milestone review.",
         linkedin: "https://www.linkedin.com/in/syed-ahmed-qasim/",
-        image: "assets/team/advisor-01.jpg"
+        image: "assets/Sir%20hafiz.png"
       },
       {
         type: "advisor",
-        name: "Muhammad Ahmad Nawaz",
+        name: "Muhammad Ahmed Nawaz",
         role: "Co-supervision, methodology support, and evaluation guidance.",
         linkedin: "https://www.linkedin.com/in/m-ahmad-nawaz-524974112/",
-        image: "assets/team/co-advisor-01.jpg"
+        image: "assets/Ahmad%20Nawaz%20-%20Dec%202025.png"
       }
     ];
 
