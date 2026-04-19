@@ -278,6 +278,10 @@ a:hover {
   opacity: 0.85;
 }
 
+.hero .section-rule {
+  margin-top: 1.1rem;
+}
+
 /* Header */
 .site-header {
   position: sticky;
@@ -289,12 +293,20 @@ a:hover {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
+.site-header .wrap {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: 1rem;
+}
+
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: unset;
+  gap: 1.1rem;
   padding: 0.85rem 0;
+  width: 100%;
 }
 
 .brand {
@@ -360,9 +372,20 @@ a:hover {
 
 .nav {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 0.35rem 1.15rem;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  min-width: 0;
 }
 
 .nav a {
@@ -388,6 +411,19 @@ a:hover {
   clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
 }
 
+.nav-cta--secondary {
+  background: rgba(240, 242, 247, 0.08);
+  color: var(--text) !important;
+}
+
+.header-cta {
+  margin-left: auto;
+}
+
+.nav-mobile-team {
+  display: none;
+}
+
 .nav-cta:hover {
   background: rgba(204, 0, 0, 0.22);
   color: #fff !important;
@@ -410,12 +446,36 @@ a:hover {
   background: var(--text);
 }
 
+@media (max-width: 1220px) and (min-width: 769px) {
+  .header-inner {
+    gap: 0.6rem;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 0.65rem;
+  }
+
+  .nav a {
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+  }
+
+  .nav-cta {
+    padding: 0.42rem 0.72rem;
+  }
+}
+
 /* Hero */
 .hero {
   padding: clamp(2.5rem, 7vw, 5rem) 0 3rem;
   position: relative;
   overflow: hidden;
   z-index: 2;
+  min-height: calc(100svh - 86px);
 }
 
 .hero::before {
@@ -450,6 +510,7 @@ a:hover {
   color: var(--eyebrow);
   font-weight: 700;
   margin: 0 0 1rem;
+  display: none;
 }
 
 .hero h1 {
@@ -1039,6 +1100,7 @@ a:hover {
 .poster-block .section-lead {
   margin-inline: auto;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .poster-preview {
@@ -1641,8 +1703,37 @@ body.modal-open {
     display: flex;
   }
 
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+    margin-left: 0;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .nav-mobile-team {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.35rem;
+    padding: 0.7rem 1rem !important;
+    border-radius: var(--radius);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background: linear-gradient(180deg, #e02020 0%, var(--accent) 100%);
+    color: #fff !important;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 8px 28px rgba(204, 0, 0, 0.35);
+  }
+
   .nav a {
     padding: 0.55rem 0;
+  }
+
+  .nav-cta {
+    text-align: center;
   }
 
   .header-inner {
@@ -1660,6 +1751,10 @@ body.modal-open {
   .cta-note {
     text-align: left;
     hyphens: manual;
+  }
+
+  .poster-block .section-lead {
+    text-align: center;
   }
 
   .emblem-stack {

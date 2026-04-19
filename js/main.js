@@ -1,6 +1,49 @@
 (function () {
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* Remove deprecated hero eyebrow line if present */
+  document.querySelectorAll(".eyebrow").forEach(function (el) {
+    el.remove();
+  });
+
+  /* Hero stat counters */
+  var counterEls = document.querySelectorAll("[data-counter-target]");
+  function runCounterAnimation() {
+    if (!counterEls.length) return;
+
+    counterEls.forEach(function (el) {
+      var target = parseInt(el.getAttribute("data-counter-target"), 10);
+      if (Number.isNaN(target) || target < 0) return;
+
+      var suffix = el.getAttribute("data-counter-suffix") || "";
+
+      if (reduceMotion) {
+        el.textContent = target + suffix;
+        return;
+      }
+
+      var duration = 1200;
+      var startTime = null;
+
+      function step(timestamp) {
+        if (startTime === null) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        var current = Math.floor(progress * target);
+        el.textContent = current + suffix;
+
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        } else {
+          el.textContent = target + suffix;
+        }
+      }
+
+      el.textContent = "0" + suffix;
+      window.requestAnimationFrame(step);
+    });
+  }
+  runCounterAnimation();
+
   /* Scroll progress bar */
   var progressBar = document.querySelector(".scroll-progress");
   function updateScrollProgress() {
@@ -131,7 +174,7 @@
       },
       {
         type: "advisor",
-        name: "Muhammad Ahmed Nawaz",
+        name: "Muhammad Ahmad Nawaz",
         role: "Co-supervision, methodology support, and evaluation guidance.",
         linkedin: "https://www.linkedin.com/in/m-ahmad-nawaz-524974112/",
         image: "assets/Ahmad%20Nawaz%20-%20Dec%202025.png"

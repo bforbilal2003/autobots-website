@@ -33,15 +33,14 @@
         <span></span><span></span>
       </button>
       <nav id="site-nav" class="nav" aria-label="Primary">
-        <a href="#why">Why it matters</a>
-        <a href="#features">Key features</a>
-        <a href="#how">How it works</a>
-        <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" rel="noopener noreferrer">See demo</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#poster">Poster</a>
-        <a href="#tech">Technology</a>
-        <a class="nav-cta" href="#contact">Talk to the team</a>
+        <div class="nav-links">
+          <a href="#features">Key features</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#poster">Poster</a>
+          <a class="nav-mobile-team" href="#contact">Talk to the team</a>
+        </div>
       </nav>
+      <a class="btn btn-primary header-cta" href="#contact">Talk to the team</a>
     </div>
   </header>
 
@@ -49,21 +48,17 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy reveal is-visible" data-reveal>
-          <p class="eyebrow">Industrial expo · Final-year project</p>
-          <h1>Autobots — Autonomous Security Engineer </h1>
+          <h1>AUTOBOTs — Autonomous Security Engineer </h1>
           <p class="subtitle-poster">Depth, Validation, and Human Oversight</p>
           <p class="lead">
-            <strong>AUTOBOTs</strong> connects MCP-enabled AI assistants to a full offensive-security toolchain so authorized testing, coursework, and research demos run with <em>structured reasoning</em>, <em>live verification</em>, and clear reporting — not ad-hoc scripts.
+            Advanced AI-powered penetration testing MCP framework.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#how">See how it runs</a>
             <a class="btn btn-primary" href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" rel="noopener noreferrer">See demo</a>
-            <a class="btn btn-ghost" href="#poster">View project poster</a>
           </div>
           <ul class="hero-stats" aria-label="Platform highlights">
-            <li><strong>150+</strong> integrated tool pathways</li>
-            <li><strong>12+</strong> agent-oriented workflows</li>
-            <li><strong>MCP</strong> standard for AI clients</li>
+            <li><strong data-counter-target="150" data-counter-suffix="+">150+</strong> integrated tool pathways</li>
+            <li><strong data-counter-target="12" data-counter-suffix="+">12+</strong> agent-oriented workflows</li>
           </ul>
         </div>
         <div class="hero-visual reveal is-visible" data-reveal>
@@ -226,7 +221,7 @@
     <section id="poster" class="section section-alt reveal" data-reveal>
       <div class="wrap poster-block">
         <h2 class="section-title">Project poster</h2>
-        <p class="section-lead">Full academic poster — tap to zoom for judges and visitors.</p>
+        <p class="section-lead">Full academic poster</p>
         <button type="button" class="poster-preview" id="open-poster" aria-haspopup="dialog" aria-controls="poster-dialog">
           <img src="assets/Poster_Pres_Final%20(2).png" alt="AUTOBOTs academic project poster: process flow, abstract, problem, solution, tech stack, key features, and team" width="1200" height="1697" loading="lazy" decoding="async" />
           <span class="poster-preview-hint">Click to enlarge</span>
