@@ -471,11 +471,76 @@ a:hover {
 
 /* Hero */
 .hero {
-  padding: clamp(2.5rem, 7vw, 5rem) 0 3rem;
+  padding: clamp(2.2rem, 6vw, 4.8rem) 0 2.8rem;
   position: relative;
   overflow: hidden;
   z-index: 2;
   min-height: calc(100svh - 86px);
+}
+
+/* Desktop hero scale-up to reduce empty fold space */
+@media (min-width: 1024px) {
+  .hero {
+    padding-top: clamp(2.8rem, 7vw, 5.4rem);
+    padding-bottom: 3.4rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.3rem, 5vw, 3.8rem);
+  }
+
+  .subtitle-poster {
+    font-size: clamp(1rem, 1.45vw, 1.2rem);
+    margin-bottom: 1.45rem;
+  }
+
+  .lead {
+    font-size: clamp(1.08rem, 1.35vw, 1.24rem);
+    margin-bottom: 1.9rem;
+  }
+
+  .hero-actions {
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    padding: 0.95rem 1.6rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-stats {
+    font-size: 0.95rem;
+    gap: 1.4rem 2.4rem;
+  }
+
+  .hero-stats strong {
+    font-size: clamp(1.4rem, 2.05vw, 1.8rem);
+  }
+
+  .hero-visual {
+    min-height: 420px;
+  }
+
+  .emblem-stack {
+    width: min(100%, 500px);
+    height: 450px;
+  }
+
+  .hex-ring--outer {
+    width: 340px;
+    height: 340px;
+  }
+
+  .hex-ring--inner {
+    width: 300px;
+    height: 300px;
+  }
+
+  .emblem-core,
+  .emblem-img {
+    width: 220px;
+    height: 220px;
+  }
 }
 
 .hero::before {
@@ -492,7 +557,7 @@ a:hover {
 .hero-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: clamp(2rem, 3vw, 3.2rem);
+  gap: clamp(1.6rem, 2.8vw, 3rem);
   align-items: center;
   position: relative;
 }
@@ -515,7 +580,7 @@ a:hover {
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(1.85rem, 4vw, 2.85rem);
+  font-size: clamp(1.95rem, 4.4vw, 3.1rem);
   line-height: 1.15;
   font-weight: 700;
   margin: 0 0 0.65rem;
@@ -526,7 +591,7 @@ a:hover {
 .subtitle-poster {
   margin: 0 0 1.25rem;
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -535,7 +600,7 @@ a:hover {
 }
 
 .lead {
-  font-size: 1.02rem;
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
   color: var(--muted);
   margin: 0 0 1.6rem;
   max-width: 56ch;
@@ -551,7 +616,7 @@ a:hover {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.85rem;
   margin-bottom: 1.75rem;
 }
 
@@ -559,10 +624,10 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.78rem 1.4rem;
+  padding: 0.82rem 1.45rem;
   border-radius: var(--radius);
   font-weight: 700;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   text-decoration: none;
   border: 1px solid transparent;
   text-transform: uppercase;
@@ -606,13 +671,13 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem 2rem;
-  font-size: 0.85rem;
+  font-size: 0.86rem;
   color: var(--muted);
 }
 
 .hero-stats strong {
   display: block;
-  font-size: 1.28rem;
+  font-size: clamp(1.28rem, 1.8vw, 1.5rem);
   color: var(--text);
   font-family: var(--font-display);
   letter-spacing: 0.04em;
@@ -623,14 +688,14 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 300px;
+  min-height: 320px;
   position: relative;
 }
 
 .emblem-stack {
   position: relative;
-  width: min(100%, 420px);
-  height: 380px;
+  width: min(100%, 430px);
+  height: 390px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1433,6 +1498,13 @@ a:hover {
   text-align: left;
 }
 
+.team-slide-badges {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .team-slide-badge {
   display: inline-flex;
   width: fit-content;
@@ -1536,11 +1608,21 @@ a:hover {
 @media (max-width: 900px) {
   .team-slide {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .team-slide-image-wrap {
-    min-height: 260px;
+    min-height: 0;
+    height: auto;
     width: min(100%, 280px);
+    aspect-ratio: 1 / 1;
+    align-self: start;
+    justify-self: center;
+    flex: none;
+  }
+
+  .team-slide-body {
+    width: 100%;
   }
 
   .team-carousel-nav--prev {

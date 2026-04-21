@@ -140,28 +140,24 @@
       {
         type: "team",
         name: "Muhammad Bilal Aslam",
-        role: "Core implementation and integration across the AUTOBOTs workflow.",
         linkedin: "https://www.linkedin.com/in/bilal-aslam-giki",
         image: "assets/bilal.jpeg"
       },
       {
         type: "team",
         name: "Syed Ahmed Haseeb",
-        role: "Backend development, API design, and service-level orchestration.",
         linkedin: "https://www.linkedin.com/in/syedahmedhaseeb/",
         image: "assets/haseeb.jpeg"
       },
       {
         type: "team",
         name: "Muhammad Bilal",
-        role: "Frontend experience, presentation flow, and visualization components.",
         linkedin: "https://www.linkedin.com/in/muhammadbilalsvg/",
         image: "assets/babloo.jpeg"
       },
       {
         type: "team",
         name: "Muhammad Hassaan Shah",
-        role: "Testing, validation, and demo readiness for expo presentation.",
         linkedin: "https://www.linkedin.com/in/hassaan-shah-148320269/",
         image: "assets/hassaan.jpeg"
       },
@@ -170,7 +166,7 @@
         name: "Hafiz Syed Ahmed Qasim",
         role: "Academic supervision, technical direction, and milestone review.",
         linkedin: "https://www.linkedin.com/in/syed-ahmed-qasim/",
-        image: "assets/Sir%20hafiz.png"
+        image: "assets/hafiz-ahmed-qasim-2026.png"
       },
       {
         type: "advisor",
@@ -190,6 +186,18 @@
         .map(function (slide) {
           var badgeClass = slide.type === "advisor" ? "team-slide-badge team-slide-badge--advisor" : "team-slide-badge";
           var badgeText = slide.type === "advisor" ? "Advisor" : "Team Member";
+          var advisorMetaBadge =
+            slide.type === "advisor" ? '<span class="team-slide-badge team-slide-badge--advisor">Lecturer FCSE GIKI</span>' : "";
+          var roleMarkup = slide.type === "advisor" ? '<p class="team-slide-role">' + slide.role + "</p>" : "";
+          var badgesMarkup =
+            '<div class="team-slide-badges">' +
+            '<span class="' +
+            badgeClass +
+            '">' +
+            badgeText +
+            "</span>" +
+            advisorMetaBadge +
+            "</div>";
           return (
             '<article class="team-slide" role="group" aria-label="' +
             slide.name +
@@ -200,17 +208,11 @@
             slide.name +
             ' portrait" loading="lazy" decoding="async" /></div>' +
             '<div class="team-slide-body">' +
-            '<span class="' +
-            badgeClass +
-            '">' +
-            badgeText +
-            "</span>" +
+            badgesMarkup +
             "<h3>" +
             slide.name +
             "</h3>" +
-            '<p class="team-slide-role">' +
-            slide.role +
-            "</p>" +
+            roleMarkup +
             '<a class="team-slide-link" href="' +
             slide.linkedin +
             '" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>' +

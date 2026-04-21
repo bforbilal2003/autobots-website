@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AUTOBOTs Demo</title>
+  <meta name="description" content="Watch the AUTOBOTs project demo without leaving the site." />
+  <link rel="icon" type="image/png" href="assets/autobots-logo.png" />
+  <link rel="apple-touch-icon" href="assets/autobots-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oxanium:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20260422-2" />
+  <style>
+    .demo-page {
+      min-height: calc(100vh - 74px);
+      display: grid;
+      place-items: center;
+      padding: 2rem 0 3rem;
+    }
+
+    .demo-shell {
+      width: min(100% - 2.5rem, 980px);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 34px rgba(0, 0, 0, 0.35);
+      padding: clamp(1rem, 2.4vw, 1.5rem);
+    }
+
+    .demo-shell h1 {
+      margin: 0 0 0.45rem;
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+    }
+
+    .demo-shell p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+    }
+
+    .demo-frame-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #000;
+    }
+
+    .demo-frame-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .demo-actions {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="AUTOBOTs home">
+        <span class="brand-mark">
+          <img src="assets/autobots-logo.png" width="48" height="48" alt="" class="brand-logo-img" decoding="async" />
+          <span class="brand-glow" aria-hidden="true"></span>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">AUTOBOTs</span>
+          <span class="brand-tagline">autobots autonomous security engineer</span>
+        </span>
+      </a>
+      <a class="btn btn-primary header-cta" href="index.html">Back to home</a>
+    </div>
+  </header>
+
+  <main class="demo-page">
+    <section class="demo-shell">
+      <h1>AUTOBOTs Demo</h1>
+      <div class="demo-frame-wrap">
+        <iframe
+          id="demo-player"
+          src=""
+          title="AUTOBOTs demo video"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="demo-actions">
+        <a class="btn btn-ghost" href="index.html">Back to home</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var videoId = (params.get("v") || "1h_4rDDm5xE").trim();
+      var safeVideoId = /^[a-zA-Z0-9_-]{6,20}$/.test(videoId) ? videoId : "1h_4rDDm5xE";
+      var player = document.getElementById("demo-player");
+      player.src = "https://www.youtube.com/embed/" + encodeURIComponent(safeVideoId) + "?autoplay=1&rel=0";
+    })();
+  </script>
+</body>
+</html>
