@@ -38,10 +38,10 @@
           <a href="#architecture">Architecture</a>
           <a href="#poster">Poster</a>
           <a href="tools.html">Tools</a>
-          <a class="nav-mobile-team" href="team.html">Meet the team</a>
+          <a class="nav-mobile-team" href="team.html?v=20260429-1">Meet the team</a>
         </div>
       </nav>
-      <a class="btn btn-primary header-cta" href="team.html">Meet the team</a>
+      <a class="btn btn-primary header-cta" href="team.html?v=20260429-1">Meet the team</a>
     </div>
   </header>
 
@@ -225,7 +225,16 @@
         <h2 class="section-title">Project poster</h2>
         <p class="section-lead">Full academic poster</p>
         <button type="button" class="poster-preview" id="open-poster" aria-haspopup="dialog" aria-controls="poster-dialog">
-          <img src="assets/autobots-pamphlet.png" alt="AUTOBOTs academic project poster: process flow, introduction, problem, solution, tech stack, key features, and team" width="754" height="1200" loading="lazy" decoding="async" />
+          <iframe
+            src="assets/autobots-poster.pdf#page=1&view=FitH"
+            title="AUTOBOTs poster PDF preview"
+            class="poster-preview-frame"
+            width="754"
+            height="1200"
+            loading="lazy"
+            tabindex="-1"
+            aria-hidden="true"
+          ></iframe>
           <span class="poster-preview-hint">Click to enlarge</span>
         </button>
       </div>
@@ -278,7 +287,13 @@
     <div class="modal-content">
       <h2 id="poster-dialog-title" class="visually-hidden">Project poster — full size</h2>
       <button type="button" class="modal-close" data-modal-close aria-label="Close poster">&times;</button>
-      <img src="assets/autobots-pamphlet.png" alt="AUTOBOTs project poster full size" class="modal-poster-img" width="754" height="1200" decoding="async" />
+      <iframe
+        src="assets/autobots-poster.pdf#page=1&view=FitH"
+        title="AUTOBOTs project poster PDF"
+        class="modal-poster-frame"
+        width="754"
+        height="1200"
+      ></iframe>
     </div>
   </div>
 

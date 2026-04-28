@@ -1197,6 +1197,15 @@ a:hover {
   vertical-align: middle;
 }
 
+.poster-preview-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 754 / 1200;
+  border: 0;
+  background: #0b1119;
+  pointer-events: none;
+}
+
 .poster-preview-hint {
   position: absolute;
   bottom: 0;
@@ -1731,6 +1740,14 @@ a:hover {
   width: 100%;
   height: auto;
   vertical-align: middle;
+}
+
+.modal-poster-frame {
+  display: block;
+  width: min(96vw, 1100px);
+  height: min(90vh, 1500px);
+  border: 0;
+  background: #0b1119;
 }
 
 .modal-close {
