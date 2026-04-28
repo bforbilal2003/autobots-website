@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AUTOBOTs Tools Arsenal</title>
+  <meta name="description" content="Complete AUTOBOTs security tools arsenal categorized by capability." />
+  <link rel="icon" type="image/png" href="assets/autobots-logo.png" />
+  <link rel="apple-touch-icon" href="assets/autobots-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oxanium:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20260422-2" />
+  <style>
+    .tools-page {
+      min-height: calc(100vh - 74px);
+      padding: 2rem 0 3rem;
+    }
+
+    .tools-shell {
+      width: min(100% - 2.5rem, 1180px);
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 34px rgba(0, 0, 0, 0.35);
+      padding: clamp(1rem, 2.4vw, 1.5rem);
+    }
+
+    .tools-shell h1 {
+      margin: 0 0 0.4rem;
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: clamp(1.2rem, 2.4vw, 1.85rem);
+    }
+
+    .tools-intro {
+      margin: 0 0 1rem;
+      color: var(--muted);
+    }
+
+    .tools-intro strong {
+      color: var(--text);
+    }
+
+    .tools-sections {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .tool-category {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-elev);
+      padding: 0.95rem;
+    }
+
+    .tool-category h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.03rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .tool-category ul {
+      margin: 0;
+      padding-left: 1rem;
+      display: grid;
+      gap: 0.42rem;
+    }
+
+    .tool-category li {
+      color: var(--text-soft);
+      line-height: 1.44;
+    }
+
+    .tool-category li strong {
+      color: var(--text);
+    }
+
+    .tools-actions {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="AUTOBOTs home">
+        <span class="brand-mark">
+          <img src="assets/autobots-logo.png" width="48" height="48" alt="" class="brand-logo-img" decoding="async" />
+          <span class="brand-glow" aria-hidden="true"></span>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">AUTOBOTs</span>
+          <span class="brand-tagline">AUTONOMOUS SECURITY ENGINEER</span>
+        </span>
+      </a>
+      <a class="btn btn-primary header-cta" href="index.html">Back to home</a>
+    </div>
+  </header>
+
+  <main class="tools-page">
+    <section class="tools-shell">
+      <h1>Security Tools Arsenal</h1>
+      <p class="tools-intro"><strong>150+ Professional Security Tools</strong> organized by domain and workflow.</p>
+
+      <div class="tools-sections">
+        <article class="tool-category">
+          <h2>Network Reconnaissance &amp; Scanning (25+)</h2>
+          <ul>
+            <li><strong>Nmap</strong> - Advanced port scanning with custom NSE scripts and service detection.</li>
+            <li><strong>Rustscan</strong> - Ultra-fast port scanner with intelligent rate limiting.</li>
+            <li><strong>Masscan</strong> - High-speed Internet-scale port scanning with banner grabbing.</li>
+            <li><strong>AutoRecon</strong> - Comprehensive automated reconnaissance with 35+ parameters.</li>
+            <li><strong>Amass</strong> - Advanced subdomain enumeration and OSINT gathering.</li>
+            <li><strong>Subfinder</strong> - Fast passive subdomain discovery with multiple sources.</li>
+            <li><strong>Fierce</strong> - DNS reconnaissance and zone transfer testing.</li>
+            <li><strong>DNSEnum</strong> - DNS information gathering and subdomain brute forcing.</li>
+            <li><strong>TheHarvester</strong> - Email and subdomain harvesting from multiple sources.</li>
+            <li><strong>ARP-Scan</strong> - Network discovery using ARP requests.</li>
+            <li><strong>NBTScan</strong> - NetBIOS name scanning and enumeration.</li>
+            <li><strong>RPCClient</strong> - RPC enumeration and null session testing.</li>
+            <li><strong>Enum4linux</strong> - SMB enumeration with user, group, and share discovery.</li>
+            <li><strong>Enum4linux-ng</strong> - Advanced SMB enumeration with enhanced logging.</li>
+            <li><strong>SMBMap</strong> - SMB share enumeration and exploitation.</li>
+            <li><strong>Responder</strong> - LLMNR, NBT-NS, and MDNS poisoner for credential harvesting.</li>
+            <li><strong>NetExec</strong> - Network service exploitation framework (formerly CrackMapExec).</li>
+          </ul>
+        </article>
+
+        <article class="tool-category">
+          <h2>Web Application Security Testing (40+)</h2>
+          <ul>
+            <li><strong>Gobuster</strong> - Directory, file, and DNS enumeration with intelligent wordlists.</li>
+            <li><strong>Dirsearch</strong> - Advanced directory and file discovery with enhanced logging.</li>
+            <li><strong>Feroxbuster</strong> - Recursive content discovery with intelligent filtering.</li>
+            <li><strong>FFuf</strong> - Fast web fuzzer with advanced filtering and parameter discovery.</li>
+            <li><strong>Dirb</strong> - Comprehensive web content scanner with recursive scanning.</li>
+            <li><strong>HTTPx</strong> - Fast HTTP probing and technology detection.</li>
+            <li><strong>Katana</strong> - Next-generation crawling and spidering with JavaScript support.</li>
+            <li><strong>Hakrawler</strong> - Fast web endpoint discovery and crawling.</li>
+            <li><strong>Gau</strong> - Get All URLs from multiple sources.</li>
+            <li><strong>Waybackurls</strong> - Historical URL discovery from Wayback Machine.</li>
+            <li><strong>Nuclei</strong> - Fast vulnerability scanner with 4000+ templates.</li>
+            <li><strong>Nikto</strong> - Web server vulnerability scanner with comprehensive checks.</li>
+            <li><strong>SQLMap</strong> - Advanced automatic SQL injection testing with tamper scripts.</li>
+            <li><strong>WPScan</strong> - WordPress security scanner with vulnerability database.</li>
+            <li><strong>Arjun</strong> - HTTP parameter discovery with intelligent fuzzing.</li>
+            <li><strong>ParamSpider</strong> - Parameter mining from web archives.</li>
+            <li><strong>X8</strong> - Hidden parameter discovery with advanced techniques.</li>
+            <li><strong>Jaeles</strong> - Advanced vulnerability scanning with custom signatures.</li>
+            <li><strong>Dalfox</strong> - Advanced XSS vulnerability scanning with DOM analysis.</li>
+            <li><strong>Wafw00f</strong> - Web application firewall fingerprinting.</li>
+            <li><strong>TestSSL</strong> - SSL/TLS configuration testing and vulnerability assessment.</li>
+            <li><strong>SSLScan</strong> - SSL/TLS cipher suite enumeration.</li>
+            <li><strong>SSLyze</strong> - Fast and comprehensive SSL/TLS configuration analyzer.</li>
+            <li><strong>Anew</strong> - Append new lines to files for efficient data processing.</li>
+            <li><strong>QSReplace</strong> - Query string parameter replacement for systematic testing.</li>
+            <li><strong>Uro</strong> - URL filtering and deduplication for efficient testing.</li>
+            <li><strong>Whatweb</strong> - Web technology identification with fingerprinting.</li>
+            <li><strong>JWT-Tool</strong> - JSON Web Token testing with algorithm confusion.</li>
+            <li><strong>GraphQL-Voyager</strong> - GraphQL schema exploration and introspection testing.</li>
+            <li><strong>Burp Suite Extensions</strong> - Custom extensions for advanced web testing.</li>
+            <li><strong>ZAP Proxy</strong> - OWASP ZAP integration for automated security scanning.</li>
+            <li><strong>Wfuzz</strong> - Web application fuzzer with advanced payload generation.</li>
+            <li><strong>Commix</strong> - Command injection exploitation with automated detection.</li>
+            <li><strong>NoSQLMap</strong> - NoSQL injection testing for MongoDB, CouchDB, etc.</li>
+            <li><strong>Tplmap</strong> - Server-side template injection exploitation tool.</li>
+          </ul>
+        </article>
+
+        <article class="tool-category">
+          <h2>Advanced Browser Agent</h2>
+          <ul>
+            <li><strong>Headless Chrome Automation</strong> - Full Chrome browser automation with Selenium.</li>
+            <li><strong>Screenshot Capture</strong> - Automated screenshot generation for visual inspection.</li>
+            <li><strong>DOM Analysis</strong> - Deep DOM tree analysis and JavaScript execution monitoring.</li>
+            <li><strong>Network Traffic Monitoring</strong> - Real-time network request/response logging.</li>
+            <li><strong>Security Header Analysis</strong> - Comprehensive security header validation.</li>
+            <li><strong>Form Detection &amp; Analysis</strong> - Automatic form discovery and input field analysis.</li>
+            <li><strong>JavaScript Execution</strong> - Dynamic content analysis with full JavaScript support.</li>
+            <li><strong>Proxy Integration</strong> - Seamless integration with Burp Suite and other proxies.</li>
+            <li><strong>Multi-page Crawling</strong> - Intelligent web application spidering and mapping.</li>
+            <li><strong>Performance Metrics</strong> - Page load times, resource usage, and optimization insights.</li>
+          </ul>
+        </article>
+
+        <article class="tool-category">
+          <h2>Authentication &amp; Password Security (12+)</h2>
+          <ul>
+            <li><strong>Hydra</strong> - Network login cracker supporting 50+ protocols.</li>
+            <li><strong>John the Ripper</strong> - Advanced password hash cracking with custom rules.</li>
+            <li><strong>Hashcat</strong> - Fast password recovery tool with GPU acceleration.</li>
+            <li><strong>Medusa</strong> - Speedy, parallel, modular login brute-forcer.</li>
+            <li><strong>Patator</strong> - Multi-purpose brute-forcer with advanced modules.</li>
+            <li><strong>NetExec</strong> - Swiss army knife for pentesting networks.</li>
+            <li><strong>SMBMap</strong> - SMB share enumeration and exploitation tool.</li>
+            <li><strong>Evil-WinRM</strong> - Windows Remote Management shell with PowerShell integration.</li>
+            <li><strong>Hash-Identifier</strong> - Hash type identification tool.</li>
+            <li><strong>HashID</strong> - Advanced hash algorithm identifier with confidence scoring.</li>
+            <li><strong>CrackStation</strong> - Online hash lookup integration.</li>
+            <li><strong>Ophcrack</strong> - Windows password cracker using rainbow tables.</li>
+          </ul>
+        </article>
+
+        <article class="tool-category">
+          <h2>Binary Analysis &amp; Reverse Engineering (25+)</h2>
+          <ul>
+            <li><strong>GDB</strong> - GNU Debugger with Python scripting and exploit development support.</li>
+            <li><strong>GDB-PEDA</strong> - Python Exploit Development Assistance for GDB.</li>
+            <li><strong>GDB-GEF</strong> - GDB Enhanced Features for exploit development.</li>
+            <li><strong>Radare2</strong> - Advanced reverse engineering framework.</li>
+            <li><strong>Ghidra</strong> - Software reverse engineering suite with headless analysis.</li>
+            <li><strong>IDA Free</strong> - Interactive disassembler with advanced analysis capabilities.</li>
+            <li><strong>Binary Ninja</strong> - Commercial reverse engineering platform.</li>
+            <li><strong>Binwalk</strong> - Firmware analysis and extraction tool.</li>
+            <li><strong>ROPgadget</strong> - ROP/JOP gadget finder with advanced search capabilities.</li>
+            <li><strong>Ropper</strong> - ROP gadget finder and exploit development tool.</li>
+            <li><strong>One-Gadget</strong> - Find one-shot RCE gadgets in libc.</li>
+            <li><strong>Checksec</strong> - Binary security property checker.</li>
+            <li><strong>Strings</strong> - Extract printable strings from binaries.</li>
+            <li><strong>Objdump</strong> - Display object file information with Intel syntax.</li>
+            <li><strong>Readelf</strong> - ELF file analyzer with detailed header information.</li>
+            <li><strong>XXD</strong> - Hex dump utility with advanced formatting.</li>
+            <li><strong>Hexdump</strong> - Hex viewer and editor with customizable output.</li>
+            <li><strong>Pwntools</strong> - CTF framework and exploit development library.</li>
+            <li><strong>Angr</strong> - Binary analysis platform with symbolic execution.</li>
+            <li><strong>Libc-Database</strong> - Libc identification and offset lookup tool.</li>
+            <li><strong>Pwninit</strong> - Automate binary exploitation setup.</li>
+            <li><strong>Volatility</strong> - Advanced memory forensics framework.</li>
+            <li><strong>MSFVenom</strong> - Metasploit payload generator with advanced encoding.</li>
+            <li><strong>UPX</strong> - Executable packer/unpacker for binary analysis.</li>
+          </ul>
+        </article>
+
+        <article class="tool-category">
+          <h2>Cloud &amp; Container Security (20+)</h2>
+          <ul>
+            <li><strong>Prowler</strong> - AWS, Azure, and GCP security assessment with compliance checks.</li>
+            <li><strong>Scout Suite</strong> - Multi-cloud security auditing for AWS, Azure, GCP, and Alibaba Cloud.</li>
+            <li><strong>CloudMapper</strong> - AWS network visualization and security analysis.</li>
+            <li><strong>Pacu</strong> - AWS exploitation framework with comprehensive modules.</li>
+            <li><strong>Trivy</strong> - Vulnerability scanner for containers and IaC.</li>
+            <li><strong>Clair</strong> - Container vulnerability analysis with detailed CVE reporting.</li>
+            <li><strong>Kube-Hunter</strong> - Kubernetes penetration testing with active/passive modes.</li>
+            <li><strong>Kube-Bench</strong> - CIS Kubernetes benchmark checker with remediation.</li>
+            <li><strong>Docker Bench Security</strong> - Docker security assessment using CIS benchmarks.</li>
+            <li><strong>Falco</strong> - Runtime security monitoring for containers and Kubernetes.</li>
+            <li><strong>Checkov</strong> - Infrastructure as code security scanning.</li>
+            <li><strong>Terrascan</strong> - Infrastructure security scanner with policy-as-code.</li>
+            <li><strong>CloudSploit</strong> - Cloud security scanning and monitoring.</li>
+            <li><strong>AWS CLI</strong> - Command line tooling for cloud security operations.</li>
+            <li><strong>Azure CLI</strong> - Azure command line with security assessment workflows.</li>
+            <li><strong>GCloud</strong> - Google Cloud command line with security tooling.</li>
+            <li><strong>Kubectl</strong> - Kubernetes command line with security context analysis.</li>
+            <li><strong>Helm</strong> - Kubernetes package manager with security scanning.</li>
+            <li><strong>Istio</strong> - Service mesh security analysis and configuration assessment.</li>
+            <li><strong>OPA</strong> - Policy engine for cloud-native security and compliance.</li>
+          </ul>
+        </article>
+
+        <article class="tool-category">
+          <h2>CTF &amp; Forensics Tools (20+)</h2>
+          <ul>
+            <li><strong>Volatility</strong> - Advanced memory forensics framework with comprehensive plugins.</li>
+            <li><strong>Volatility3</strong> - Next-generation memory forensics with enhanced analysis.</li>
+            <li><strong>Foremost</strong> - File carving and data recovery with signature-based detection.</li>
+            <li><strong>PhotoRec</strong> - File recovery software with advanced carving capabilities.</li>
+            <li><strong>TestDisk</strong> - Disk partition recovery and repair tool.</li>
+            <li><strong>Steghide</strong> - Steganography detection and extraction with password support.</li>
+            <li><strong>Stegsolve</strong> - Steganography analysis tool with visual inspection.</li>
+            <li><strong>Zsteg</strong> - PNG/BMP steganography detection tool.</li>
+            <li><strong>Outguess</strong> - Universal steganographic tool for JPEG images.</li>
+            <li><strong>ExifTool</strong> - Metadata reader/writer for various file formats.</li>
+            <li><strong>Binwalk</strong> - Firmware analysis and reverse engineering with extraction.</li>
+            <li><strong>Scalpel</strong> - File carving tool with configurable headers and footers.</li>
+            <li><strong>Bulk Extractor</strong> - Digital forensics tool for extracting features.</li>
+            <li><strong>Autopsy</strong> - Digital forensics platform with timeline analysis.</li>
+            <li><strong>Sleuth Kit</strong> - Collection of command-line digital forensics tools.</li>
+          </ul>
+        </article>
+
+        <article class="tool-category">
+          <h2>Cryptography &amp; Hash Analysis</h2>
+          <ul>
+            <li><strong>John the Ripper</strong> - Password cracker with custom rules and advanced modes.</li>
+            <li><strong>Hashcat</strong> - GPU-accelerated password recovery with 300+ hash types.</li>
+            <li><strong>Hash-Identifier</strong> - Hash type identification with confidence scoring.</li>
+            <li><strong>CyberChef</strong> - Web-based analysis toolkit for encoding and encryption.</li>
+            <li><strong>Cipher-Identifier</strong> - Automatic cipher type detection and analysis.</li>
+            <li><strong>Frequency-Analysis</strong> - Statistical cryptanalysis for substitution ciphers.</li>
+            <li><strong>RSATool</strong> - RSA key analysis and common attack implementations.</li>
+            <li><strong>FactorDB</strong> - Integer factorization database for cryptographic challenges.</li>
+          </ul>
+        </article>
+
+        <article class="tool-category">
+          <h2>Bug Bounty &amp; OSINT Arsenal (20+)</h2>
+          <ul>
+            <li><strong>Amass</strong> - Advanced subdomain enumeration and OSINT gathering.</li>
+            <li><strong>Subfinder</strong> - Fast passive subdomain discovery with API integration.</li>
+            <li><strong>Hakrawler</strong> - Fast web endpoint discovery and crawling.</li>
+            <li><strong>HTTPx</strong> - Fast and multi-purpose HTTP toolkit with technology detection.</li>
+            <li><strong>ParamSpider</strong> - Mining parameters from web archives.</li>
+            <li><strong>Aquatone</strong> - Visual inspection of websites across hosts.</li>
+            <li><strong>Subjack</strong> - Subdomain takeover vulnerability checker.</li>
+            <li><strong>DNSEnum</strong> - DNS enumeration script with zone transfer capabilities.</li>
+            <li><strong>Fierce</strong> - Domain scanner for locating targets with DNS analysis.</li>
+            <li><strong>TheHarvester</strong> - Email and subdomain harvesting from multiple sources.</li>
+            <li><strong>Sherlock</strong> - Username investigation across social networks.</li>
+            <li><strong>Social-Analyzer</strong> - Social media analysis and OSINT gathering.</li>
+            <li><strong>Recon-ng</strong> - Web reconnaissance framework with modular architecture.</li>
+            <li><strong>Maltego</strong> - Link analysis and data mining for OSINT investigations.</li>
+            <li><strong>SpiderFoot</strong> - OSINT automation with 200+ modules.</li>
+            <li><strong>Shodan</strong> - Internet-connected device search with advanced filtering.</li>
+            <li><strong>Censys</strong> - Internet asset discovery with certificate analysis.</li>
+            <li><strong>Have I Been Pwned</strong> - Breach data analysis and credential exposure.</li>
+            <li><strong>Pipl</strong> - People search integration for identity investigation.</li>
+            <li><strong>TruffleHog</strong> - Git repository secret scanning with entropy analysis.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="tools-actions">
+        <a class="btn btn-ghost" href="index.html">Back to home</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

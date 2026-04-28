@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AUTOBOTs Team</title>
+  <meta name="description" content="Meet the AUTOBOTs project team, advisor, and co-advisor." />
+  <link rel="icon" type="image/png" href="assets/autobots-logo.png" />
+  <link rel="apple-touch-icon" href="assets/autobots-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oxanium:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=20260422-2" />
+  <style>
+    .team-page {
+      min-height: calc(100vh - 74px);
+      padding: 2rem 0 3rem;
+    }
+
+    .team-shell {
+      width: min(100% - 2.5rem, 1180px);
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 34px rgba(0, 0, 0, 0.35);
+      padding: clamp(1rem, 2.4vw, 1.5rem);
+    }
+
+    .team-shell h1 {
+      margin: 0 0 0.4rem;
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: clamp(1.2rem, 2.4vw, 1.85rem);
+    }
+
+    .team-shell p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .team-member-card {
+      border: 1px solid var(--border);
+      background: var(--bg-elev);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .team-member-body {
+      padding: 0.9rem 0.9rem 1rem;
+      display: grid;
+      gap: 0.55rem;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .team-member-avatar {
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(122, 215, 255, 0.32);
+      background: #050b10;
+      margin: 0.1rem auto 0.2rem;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+    }
+
+    .team-member-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .team-member-badges {
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+    }
+
+    .team-member-badge {
+      padding: 0.24rem 0.58rem;
+      border-radius: 999px;
+      border: 1px solid rgba(122, 215, 255, 0.35);
+      background: rgba(9, 19, 26, 0.85);
+      color: var(--text-soft);
+      font-size: 0.67rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .team-member-badge--advisor {
+      border-color: rgba(122, 255, 201, 0.4);
+      color: var(--accent-2);
+    }
+
+    .team-member-body h2 {
+      margin: 0;
+      font-size: 1.02rem;
+    }
+
+    .team-member-role {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.42;
+    }
+
+    .team-member-link {
+      display: inline-flex;
+      width: fit-content;
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 180ms ease;
+    }
+
+    .team-member-link:hover {
+      border-color: rgba(122, 215, 255, 0.7);
+    }
+
+    .team-actions {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="AUTOBOTs home">
+        <span class="brand-mark">
+          <img src="assets/autobots-logo.png" width="48" height="48" alt="" class="brand-logo-img" decoding="async" />
+          <span class="brand-glow" aria-hidden="true"></span>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">AUTOBOTs</span>
+          <span class="brand-tagline">AUTONOMOUS SECURITY ENGINEER</span>
+        </span>
+      </a>
+      <a class="btn btn-primary header-cta" href="index.html">Back to home</a>
+    </div>
+  </header>
+
+  <main class="team-page">
+    <section class="team-shell">
+      <h1>Meet the Team</h1>
+      <p>All team members, advisor, and co-advisor are shown here in one catalog view.</p>
+
+      <div class="team-grid">
+        <article class="team-member-card">
+          <div class="team-member-body">
+            <div class="team-member-avatar">
+              <img src="assets/bilal.jpeg" alt="Muhammad Bilal Aslam portrait" loading="lazy" decoding="async" />
+            </div>
+            <div class="team-member-badges">
+              <span class="team-member-badge">Team member</span>
+            </div>
+            <h2>Muhammad Bilal Aslam</h2>
+            <p class="team-member-role">Final Year Project team member</p>
+            <a class="team-member-link" href="https://www.linkedin.com/in/bilal-aslam-giki" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </article>
+
+        <article class="team-member-card">
+          <div class="team-member-body">
+            <div class="team-member-avatar">
+              <img src="assets/haseeb.jpeg" alt="Syed Ahmed Haseeb portrait" loading="lazy" decoding="async" />
+            </div>
+            <div class="team-member-badges">
+              <span class="team-member-badge">Team member</span>
+            </div>
+            <h2>Syed Ahmed Haseeb</h2>
+            <p class="team-member-role">Final Year Project team member</p>
+            <a class="team-member-link" href="https://www.linkedin.com/in/syedahmedhaseeb/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </article>
+
+        <article class="team-member-card">
+          <div class="team-member-body">
+            <div class="team-member-avatar">
+              <img src="assets/babloo.jpeg" alt="Muhammad Bilal portrait" loading="lazy" decoding="async" />
+            </div>
+            <div class="team-member-badges">
+              <span class="team-member-badge">Team member</span>
+            </div>
+            <h2>Muhammad Bilal</h2>
+            <p class="team-member-role">Final Year Project team member</p>
+            <a class="team-member-link" href="https://www.linkedin.com/in/muhammadbilalsvg/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </article>
+
+        <article class="team-member-card">
+          <div class="team-member-body">
+            <div class="team-member-avatar">
+              <img src="assets/hassaan.jpeg" alt="Muhammad Hassaan Shah portrait" loading="lazy" decoding="async" />
+            </div>
+            <div class="team-member-badges">
+              <span class="team-member-badge">Team member</span>
+            </div>
+            <h2>Muhammad Hassaan Shah</h2>
+            <p class="team-member-role">Final Year Project team member</p>
+            <a class="team-member-link" href="https://www.linkedin.com/in/hassaan-shah-148320269/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </article>
+
+        <article class="team-member-card">
+          <div class="team-member-body">
+            <div class="team-member-avatar">
+              <img src="assets/hafiz-ahmed-qasim-2026.png" alt="Hafiz Syed Ahmed Qasim portrait" loading="lazy" decoding="async" />
+            </div>
+            <div class="team-member-badges">
+              <span class="team-member-badge team-member-badge--advisor">Advisor</span>
+              <span class="team-member-badge team-member-badge--advisor">Lecturer, FCSE GIKI</span>
+            </div>
+            <h2>Hafiz Syed Ahmed Qasim</h2>
+            <p class="team-member-role">Academic supervision, technical direction, and milestone review.</p>
+            <a class="team-member-link" href="https://www.linkedin.com/in/syed-ahmed-qasim/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </article>
+
+        <article class="team-member-card">
+          <div class="team-member-body">
+            <div class="team-member-avatar">
+              <img src="assets/Ahmad%20Nawaz%20-%20Dec%202025.png" alt="Muhammad Ahmad Nawaz portrait" loading="lazy" decoding="async" />
+            </div>
+            <div class="team-member-badges">
+              <span class="team-member-badge team-member-badge--advisor">Co-advisor</span>
+              <span class="team-member-badge team-member-badge--advisor">Lecturer, FCSE GIKI</span>
+            </div>
+            <h2>Muhammad Ahmad Nawaz</h2>
+            <p class="team-member-role">Co-supervision, methodology support, and evaluation guidance.</p>
+            <a class="team-member-link" href="https://www.linkedin.com/in/m-ahmad-nawaz-524974112/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="team-actions">
+        <a class="btn btn-ghost" href="index.html">Back to home</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
